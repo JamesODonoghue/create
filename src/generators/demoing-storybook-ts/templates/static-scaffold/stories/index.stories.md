@@ -1,11 +1,11 @@
 ```js script
 import { html } from '@open-wc/demoing-storybook';
-import '../dist/<%= tagName %>.js';
+import '../<%= tagName %>.js';
 
 export default {
   title: '<%= className %>',
   component: '<%= tagName %>',
-  options: { selectedPanel: "storybookjs/knobs/panel" },
+  options: { selectedPanel: 'storybookjs/knobs/panel' },
 };
 ```
 
@@ -28,7 +28,7 @@ yarn add <%= tagName %>
 ```
 
 ```js
-import '<%= tagName %>/<%= tagName %>.js';
+import '<%= tagName %>.js';
 ```
 
 ```js preview-story

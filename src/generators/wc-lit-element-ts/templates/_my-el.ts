@@ -1,4 +1,5 @@
 import { html, css, LitElement, property, customElement } from 'lit-element';
+import { styles } from './<%= tagName %>.css';
 
 @customElement('<%= tagName %>')
 export class <%= className %> extends LitElement {

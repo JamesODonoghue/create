@@ -1,6 +1,6 @@
 {
     "name": "@advent-wc/create",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publishConfig": {
         "registry": "https://artifacts-sf.int.ssnc.cloud/artifactory/api/npm/advs-cloudwebcomponents-npm-local/"
     },

@@ -1,6 +1,9 @@
 {
     "main": "<%= tagName %>.js",
     "module": "<%= tagName %>.js",
+    "publishConfig": {
+        "registry": "https://artifacts-sf.int.ssnc.cloud/artifactory/api/npm/advs-cloudwebcomponents-npm-local/"
+    },
     "scripts": {
         "start": "concurrently --kill-others --names tsc,web-dev-server \"npm run tsc:watch\" \"web-dev-server --app-index demo/index.html --node-resolve --open --watch\"",
         "tsc:watch": "tsc --watch",

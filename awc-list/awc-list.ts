@@ -1,11 +1,12 @@
-import { html, css, LitElement, property } from 'lit-element';
+import { html, css, LitElement, property, customElement } from 'lit-element';
 
-export class <%= className %> extends LitElement {
+@customElement('awc-list')
+export class AwcList extends LitElement {
   static styles =css`
     :host {
       display: block;
       padding: 25px;
-      color: var(--<%= tagName %>-text-color, #000);
+      color: var(--awc-list-text-color, #000);
     }
   `;
 

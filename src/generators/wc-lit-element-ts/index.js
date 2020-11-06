@@ -28,13 +28,13 @@ export const TsWcLitElementMixin = subclass =>
         this.options.installDependencies === 'yarn' ? 'yarn' : 'npm run';
 
       await super.execute();
-      const { tagName, className } = this.templateData;
+      const { tagName } = this.templateData;
 
       // write & rename el class template
-      this.copyTemplate(
-        `${__dirname}/templates/_MyEl.ts`,
-        this.destinationPath(`src/${className}.ts`),
-      );
+      //   this.copyTemplate(
+      //     `${__dirname}/templates/_MyEl.ts`,
+      //     this.destinationPath(`src/${className}.ts`),
+      //   );
 
       // write & rename el registration template
       this.copyTemplate(`${__dirname}/templates/_my-el.ts`, this.destinationPath(`${tagName}.ts`));
@@ -60,6 +60,7 @@ export const TsWcLitElementPackageMixin = subclass =>
         `${__dirname}/templates/_tsconfig.json`,
         this.destinationPath('tsconfig.json'),
       );
+      this.copyTemplate(`${__dirname}/templates/._npmignore`, this.destinationPath('.npmignore'));
     }
 
     async end() {

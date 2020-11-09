@@ -23,6 +23,7 @@
         "**/*.ts"
     ],
     "exclude": [
-        "test/*.ts"
+        "test/*.ts",
+        "sass-template.ts"
     ]
 }

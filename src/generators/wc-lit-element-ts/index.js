@@ -66,8 +66,8 @@ export const TsWcLitElementPackageMixin = subclass =>
       );
       this.copyTemplate(`${__dirname}/templates/._npmignore`, this.destinationPath('.npmignore'));
       this.copyTemplate(
-        `${__dirname}/templates/sass-template.js`,
-        this.destinationPath('sass-template.js'),
+        `${__dirname}/templates/sass-template.ts`,
+        this.destinationPath('sass-template.ts'),
       );
     }
 

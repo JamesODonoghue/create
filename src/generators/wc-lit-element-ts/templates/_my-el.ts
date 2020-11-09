@@ -3,26 +3,20 @@ import { styles } from './<%= tagName %>.css';
 
 @customElement('<%= tagName %>')
 export class <%= className %> extends LitElement {
-  static styles =css`
-    :host {
-      display: block;
-      padding: 25px;
-      color: var(--<%= tagName %>-text-color, #000);
+    @property() title:string = 'title';
+    
+    static get styles() {
+        return css`
+            ${styles}
+        `;
     }
-  `;
 
-  @property({type: String}) title = 'Hey there';
-
-  @property({type: Number}) counter = 5;
-
-  __increment() {
-    this.counter += 1;
-  }
-
-  render() {
-    return html`
-      <h2>${this.title} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
-    `;
-  }
+    render() {
+        return html``
+    }
+}
+declare global {
+    interface HTMLElementTagNameMap {
+        '<%= tagName %>': <%= className %>;
+    }
 }

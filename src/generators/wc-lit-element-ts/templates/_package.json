@@ -6,7 +6,7 @@
     },
     "scripts": {
         "start": "concurrently --kill-others --names tsc,web-dev-server \"npm run tsc:watch\" \"web-dev-server --app-index demo/index.html --node-resolve --open --watch\"",
-        "style": "sass-render *.scss --q --suffix '.css.ts' -t ./sass-template.js",
+        "style": "sass-render *.scss --q --suffix '.css.ts' -t ./sass-template.ts",
         "tsc:watch": "tsc --watch",
         "prepare": "npm run style && tsc",
         "prepublishOnly": "npm run style && tsc"

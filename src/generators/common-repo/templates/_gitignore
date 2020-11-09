@@ -22,3 +22,4 @@
 *.js
 *.d.ts
 *.map
+*.css.ts
